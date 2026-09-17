@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow | Task Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app">
+        <header class="header">
+            <div class="brand">
+                <div class="logo">T</div>
+                <div>
+                    <h1>TaskFlow</h1>
+                    <p>Manage your tasks with ease</p>
+                </div>
+            </div>
+
+            <div class="stats">
+                <span id="totalTasks">10</span>
+                <small>Total Tasks</small>
+            </div>
+        </header>
+
+        <div class="board">
+
+            <section class="column todo-column">
+                <div class="column-title">
+                    <div>
+                        <span class="status-dot todo-dot"></span>
+                        <h2>To Do</h2>
+                    </div>
+                    <span class="count" id="todoCount">4</span>
+                </div>
+
+                <p class="column-description">Tasks waiting to be started</p>
+
+                <div class="task-list" data-status="todo">
+
+                    <div class="task-card" draggable="true">
+                        <div class="card-header">
+                            <span class="tag purple">Design</span>
+                            <span class="drag-icon">⠿</span>
+                        </div>
+                        <h3>Design Landing Page</h3>
+                        <p>Create a clean and modern landing page UI.</p>
+                        <div class="card-footer">
+                            <span>📅 Sep 18</span>
+                            <span class="priority high">High</span>
+                        </div>
+                    </div>
+
+                    <div class="task-card" draggable="true">
+                        <div class="card-header">
+                            <span class="tag blue">Development</span>
+                            <span class="drag-icon">⠿</span>
+                        </div>
+                        <h3>Build Navigation</h3>
+                        <p>Develop responsive navigation for the website.</p>
+                        <div class="card-footer">
+                            <span>📅 Sep 19</span>
+                            <span class="priority medium">Medium</span>
+                        </div>
+                    </div>
+
+                    <div class="task-card" draggable="true">
+                        <div class="card-header">
+                            <span class="tag green">API</span>
+                            <span class="drag-icon">⠿</span>
+                        </div>
+                        <h3>Setup API Integration</h3>
+                        <p>Connect the application with the user API.</p>
+                        <div class="card-footer">
+                            <span>📅 Sep 20</span>
+                            <span class="priority high">High</span>
+                        </div>
+                    </div>
+
+                    <div class="task-card" draggable="true">
+                        <div class="card-header">
+                            <span class="tag orange">Testing</span>
+                            <span class="drag-icon">⠿</span>
+                        </div>
+                        <h3>Test Contact Form</h3>
+                        <p>Check validation and form submission.</p>
+                        <div class="card-footer">
+                            <span>📅 Sep 21</span>
+                            <span class="priority low">Low</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="column progress-column">
+                <div class="column-title">
+                    <div>
+                        <span class="status-dot progress-dot"></span>
+                        <h2>In Progress</h2>
+                    </div>
+                    <span class="count" id="progressCount">3</span>
+                </div>
+
+                <p class="column-description">Tasks currently in progress</p>
+
+                <div class="task-list" data-status="progress">
+
+                    <div class="task-card" draggable="true">
+                        <div class="card-header">
+                            <span class="tag blue">Frontend</span>
+                            <span class="drag-icon">⠿</span>
+                        </div>
+                        <h3>Create Dashboard</h3>
+                        <p>Build a responsive dashboard interface.</p>
+                        <div class="card-footer">
+                            <span>📅 Sep 22</span>
+                            <span class="priority high">High</span>
+                        </div>
+                    </div>
+
+                    <div class="task-card" draggable="true">
+                        <div class="card-header">
+                            <span class="tag orange">Testing</span>
+                            <span class="drag-icon">⠿</span>
+                        </div>
+                        <h3>Test Login Form</h3>
+                        <p>Check login validation and error handling.</p>
+                        <div class="card-footer">
+                            <span>📅 Sep 23</span>
+                            <span class="priority medium">Medium</span>
+                        </div>
+                    </div>
+
+                    <div class="task-card" draggable="true">
+                        <div class="card-header">
+                            <span class="tag purple">UI/UX</span>
+                            <span class="drag-icon">⠿</span>
+                        </div>
+                        <h3>Improve Mobile Layout</h3>
+                        <p>Optimize the website for mobile devices.</p>
+                        <div class="card-footer">
+                            <span>📅 Sep 24</span>
+                            <span class="priority medium">Medium</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="column completed-column">
+                <div class="column-title">
+                    <div>
+                        <span class="status-dot completed-dot"></span>
+                        <h2>Completed</h2>
+                    </div>
+                    <span class="count" id="completedCount">3</span>
+                </div>
+
+                <p class="column-description">Successfully completed tasks</p>
+
+                <div class="task-list" data-status="completed">
+
+                    <div class="task-card completed-card" draggable="true">
+                        <div class="card-header">
+                            <span class="tag green">Development</span>
+                            <span class="drag-icon">⠿</span>
+                        </div>
+                        <h3>Create Login Page</h3>
+                        <p>Build a responsive login page interface.</p>
+                        <div class="card-footer">
+                            <span>✓ Completed</span>
+                            <span class="priority done">Done</span>
+                        </div>
+                    </div>
+
+                    <div class="task-card completed-card" draggable="true">
+                        <div class="card-header">
+                            <span class="tag purple">Design</span>
+                            <span class="drag-icon">⠿</span>
+                        </div>
+                        <h3>Create Wireframe</h3>
+                        <p>Prepare the initial website wireframe.</p>
+                        <div class="card-footer">
+                            <span>✓ Completed</span>
+                            <span class="priority done">Done</span>
+                        </div>
+                    </div>
+
+                    <div class="task-card completed-card" draggable="true">
+                        <div class="card-header">
+                            <span class="tag blue">Frontend</span>
+                            <span class="drag-icon">⠿</span>
+                        </div>
+                        <h3>Setup Project Structure</h3>
+                        <p>Create the basic HTML, CSS and JS structure.</p>
+                        <div class="card-footer">
+                            <span>✓ Completed</span>
+                            <span class="priority done">Done</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <div class="drop-message" id="dropMessage">Drop task here</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
