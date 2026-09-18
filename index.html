@@ -22,7 +22,31 @@
                 <span id="totalTasks">10</span>
                 <small>Total Tasks</small>
             </div>
+
+            <div class="header-actions">
+                <div class="progress-summary">
+                    <strong id="completionPercentage">30%</strong>
+                    <small>Completed</small>
+                </div>
+                <button class="primary-button" id="addTaskButton" type="button">+ Add Task</button>
+            </div>
         </header>
+
+        <div class="board-controls">
+            <label class="search-box" for="searchInput">
+                <span aria-hidden="true">⌕</span>
+                <input id="searchInput" type="search" placeholder="Search tasks by title..." autocomplete="off">
+            </label>
+            <label class="filter-box" for="priorityFilter">
+                <span>Priority</span>
+                <select id="priorityFilter">
+                    <option value="all">All Priorities</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </label>
+        </div>
 
         <div class="board">
 
@@ -37,61 +61,7 @@
 
                 <p class="column-description">Tasks waiting to be started</p>
 
-                <div class="task-list" data-status="todo">
-
-                    <div class="task-card" draggable="true">
-                        <div class="card-header">
-                            <span class="tag purple">Design</span>
-                            <span class="drag-icon">⠿</span>
-                        </div>
-                        <h3>Design Landing Page</h3>
-                        <p>Create a clean and modern landing page UI.</p>
-                        <div class="card-footer">
-                            <span>📅 Sep 18</span>
-                            <span class="priority high">High</span>
-                        </div>
-                    </div>
-
-                    <div class="task-card" draggable="true">
-                        <div class="card-header">
-                            <span class="tag blue">Development</span>
-                            <span class="drag-icon">⠿</span>
-                        </div>
-                        <h3>Build Navigation</h3>
-                        <p>Develop responsive navigation for the website.</p>
-                        <div class="card-footer">
-                            <span>📅 Sep 19</span>
-                            <span class="priority medium">Medium</span>
-                        </div>
-                    </div>
-
-                    <div class="task-card" draggable="true">
-                        <div class="card-header">
-                            <span class="tag green">API</span>
-                            <span class="drag-icon">⠿</span>
-                        </div>
-                        <h3>Setup API Integration</h3>
-                        <p>Connect the application with the user API.</p>
-                        <div class="card-footer">
-                            <span>📅 Sep 20</span>
-                            <span class="priority high">High</span>
-                        </div>
-                    </div>
-
-                    <div class="task-card" draggable="true">
-                        <div class="card-header">
-                            <span class="tag orange">Testing</span>
-                            <span class="drag-icon">⠿</span>
-                        </div>
-                        <h3>Test Contact Form</h3>
-                        <p>Check validation and form submission.</p>
-                        <div class="card-footer">
-                            <span>📅 Sep 21</span>
-                            <span class="priority low">Low</span>
-                        </div>
-                    </div>
-
-                </div>
+                <div class="task-list" data-status="todo"></div>
             </section>
 
             <section class="column progress-column">
@@ -105,48 +75,7 @@
 
                 <p class="column-description">Tasks currently in progress</p>
 
-                <div class="task-list" data-status="progress">
-
-                    <div class="task-card" draggable="true">
-                        <div class="card-header">
-                            <span class="tag blue">Frontend</span>
-                            <span class="drag-icon">⠿</span>
-                        </div>
-                        <h3>Create Dashboard</h3>
-                        <p>Build a responsive dashboard interface.</p>
-                        <div class="card-footer">
-                            <span>📅 Sep 22</span>
-                            <span class="priority high">High</span>
-                        </div>
-                    </div>
-
-                    <div class="task-card" draggable="true">
-                        <div class="card-header">
-                            <span class="tag orange">Testing</span>
-                            <span class="drag-icon">⠿</span>
-                        </div>
-                        <h3>Test Login Form</h3>
-                        <p>Check login validation and error handling.</p>
-                        <div class="card-footer">
-                            <span>📅 Sep 23</span>
-                            <span class="priority medium">Medium</span>
-                        </div>
-                    </div>
-
-                    <div class="task-card" draggable="true">
-                        <div class="card-header">
-                            <span class="tag purple">UI/UX</span>
-                            <span class="drag-icon">⠿</span>
-                        </div>
-                        <h3>Improve Mobile Layout</h3>
-                        <p>Optimize the website for mobile devices.</p>
-                        <div class="card-footer">
-                            <span>📅 Sep 24</span>
-                            <span class="priority medium">Medium</span>
-                        </div>
-                    </div>
-
-                </div>
+                <div class="task-list" data-status="progress"></div>
             </section>
 
             <section class="column completed-column">
@@ -160,54 +89,32 @@
 
                 <p class="column-description">Successfully completed tasks</p>
 
-                <div class="task-list" data-status="completed">
-
-                    <div class="task-card completed-card" draggable="true">
-                        <div class="card-header">
-                            <span class="tag green">Development</span>
-                            <span class="drag-icon">⠿</span>
-                        </div>
-                        <h3>Create Login Page</h3>
-                        <p>Build a responsive login page interface.</p>
-                        <div class="card-footer">
-                            <span>✓ Completed</span>
-                            <span class="priority done">Done</span>
-                        </div>
-                    </div>
-
-                    <div class="task-card completed-card" draggable="true">
-                        <div class="card-header">
-                            <span class="tag purple">Design</span>
-                            <span class="drag-icon">⠿</span>
-                        </div>
-                        <h3>Create Wireframe</h3>
-                        <p>Prepare the initial website wireframe.</p>
-                        <div class="card-footer">
-                            <span>✓ Completed</span>
-                            <span class="priority done">Done</span>
-                        </div>
-                    </div>
-
-                    <div class="task-card completed-card" draggable="true">
-                        <div class="card-header">
-                            <span class="tag blue">Frontend</span>
-                            <span class="drag-icon">⠿</span>
-                        </div>
-                        <h3>Setup Project Structure</h3>
-                        <p>Create the basic HTML, CSS and JS structure.</p>
-                        <div class="card-footer">
-                            <span>✓ Completed</span>
-                            <span class="priority done">Done</span>
-                        </div>
-                    </div>
-
-                </div>
+                <div class="task-list" data-status="completed"></div>
             </section>
 
         </div>
     </div>
 
     <div class="drop-message" id="dropMessage">Drop task here</div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <div class="modal-backdrop" id="taskModal" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <div class="modal-header">
+                <div>
+                    <p class="modal-eyebrow">Task details</p>
+                    <h2 id="modalTitle">Add New Task</h2>
+                </div>
+                <button class="icon-button close-modal" id="closeModalButton" type="button" aria-label="Close modal">×</button>
+            </div>
+            <form id="taskForm">
+                <label>Task title<input id="taskTitle" type="text" required maxlength="80" placeholder="e.g. Plan sprint review"></label>
+                <label>Task description<textarea id="taskDescription" rows="4" required maxlength="240" placeholder="Describe what needs to be done..."></textarea></label>
+                <label>Priority<select id="taskPriority"><option value="high">High</option><option value="medium" selected>Medium</option><option value="low">Low</option></select></label>
+                <div class="modal-actions"><button class="secondary-button" id="cancelModalButton" type="button">Cancel</button><button class="primary-button" type="submit">Save Task</button></div>
+            </form>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
